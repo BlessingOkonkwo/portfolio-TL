@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessing's Portfolio</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Swiper's CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="https://kit.fontawesome.com/cf494ebb24.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            counter-reset: section;
+        }
+        .numbered-heading::before {
+            position: relative;
+            bottom: 2px;
+            counter-increment: section 1;
+            content: "0" counter(section) ".";
+            margin-right: 10px;
+            color: #6747C7;
+            font-family: 'Cormorant Upright';
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .numbered-heading::after {
+            content: "";
+            display: block;
+            position: relative;
+            /* top: -5px; */
+            width: 300px;
+            height: 1px;
+            margin-left: 15px;
+            background-color: #c0bebe;
+        }
+
+        .skills li::before {
+            position: relative;
+            bottom: -2px;
+            content: "▹";
+            margin-right: 10px;
+            color: #6747C7;
+            font-family: 'Cormorant Upright';
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-[rgba(230,230,250,.4)] font-['Cormorant_Garamond'] font-[500]">
+    <div class="">
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <nav class="flex justify-between items-center p-2 bg-white">
+                <h1 class="font-['Alex_Brush'] text-[28px] text-center">
+                    Blessing
+                </h1>
+                <button class="hidden font-['Cabin_Sketch'] cursor-pointer bg-[#e6e6fa] hover:bg-[#cbcbfa] active:bg-[#e6e6fa] active:bg-inherit p-2 rounded-3xl shadow ">
+                    More
+                </button>
+
+                <!-- <div class="hamburger" id="hamburger" style="margin-left: 10px;">
+                    <i class="fa-sharp fa-solid fa-bars fa-2x" id="bars" style="position: absolute; top: 0; right: 0;"></i>
+                    <i class="fa-sharp fa-solid fa-xmark fa-2x hidden"  id="x" style="position: absolute; top: 0; right: 0;"></i>
+                </div> -->
+
+                <ul class="nav-div justify-between items-center md:gap-2 font-['Cabin_Sketch'] flex">
+                    <li class="cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 font-bold">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 font-bold">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <!-- <li class="cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 font-bold">
+                        <a href="#testimonials">Testimonials</a>
+                    </li> -->
+                    <li class="cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 font-bold">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 font-bold">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="bg-[rgba(230,230,250,1)] px-10 md:px-36 py-10 md:py-20 md:my-20 my-10 shadow">
+            <h1 class="text-[#6747c7] font-bold text-[25px]">
+                Hi, my name is
+            </h1>
+            <h2 class="font-bold text-[70px]">
+                Blessing Okonkwo.
+            </h2>
+            <h3 class="text-gray-600 text-[45px]">
+                I build things for the web.
+            </h3>
+            <p class="text-[20px] text-gray-600">
+                I’m a software engineer specializing in building (and occasionally designing) exceptional
+                digital experiences. I prioritize building accessible and user-centered products, interfaces
+                and web experiences.
+            </p>
+            <div class="flex gap-4 my-6 font-['Cabin_Sketch']">
+                <span class="border border-gray-300 cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 rounded-lg shadow-md bg-[#e6e6fa] hover:bg-[#cbcbfa] active:bg-[#e6e6fa] font-bold">
+                    <a href="https://docs.google.com/document/d/1pWQzD4AI-GebWEl1FW4VYntdEJZXWIJK2xQiWWfaY8g/edit?usp=sharing">Resume -></a>
+                </span>
+                <span class="border border-gray-300 cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 rounded-lg shadow-md bg-[#e6e6fa] hover:bg-[#cbcbfa] active:bg-[#e6e6fa] font-bold">
+                    <a href="https://medium.com/@theblessingokonkwo">Check out my blog! -></a>
+                </span>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <div id="about"></div>
+        <section class="bg-white md:m-12 p-8 rounded-lg shadow">
+            <div>
+                <h1 class="flex items-center relative w-full whitespace-nowrap numbered-heading font-['Cormorant_Upright'] font-[700] text-[24px]">
+                    About Me
+                </h1>
+                <div class="grid grid-cols-12 gap-4 items-center justify-center">
+                    <div class="col-span-12 md:col-span-7 self-center justify-self-center">
+                        <p class="my-2">
+                            Hello! My name is Blessing and I enjoy creating things that live on 
+                            the internet. My interest in web development started back in 2020 when 
+                            I decided to try recreating some of my favorite web pages — turns out 
+                            hacking together a basic portfolio website taught me a lot about HTML & 
+                            CSS!
+                        </p>
+                        <p class="my-2">
+                            Fast-forward to today, and I’ve had the privilege of working at a 
+                            non-profit PanAfrican Organization, a start-up, and a non-profit organization.
+                        </p>
+                        <p class="my-2">
+                            My main focus these days is prioritizing building accessible and inclusive 
+                            digital experiences, ensuring that websites and applications I work on cater 
+                            to diverse users. By emphasizing accessibility, adhering to web standards, 
+                            and leveraging assistive technologies, I aim to create a seamless and inclusive 
+                            user experience for all.
+                        </p>
+                    </div>
+                    <div class="col-span-12 md:col-span-5 h-96 w-96 rounded-full shadow-lg self-center justify-self-center">
+                        <img class="m-0 col-span-4 w-full h-full rounded-full" src="./images/BLESSING.jpeg" alt="Blessing" height="100%">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <div id="skills"></div>
+        <section class="skills bg-[rgba(230,230,250,1)] p-16 shadow my-10">
+            <h1 class="flex items-center relative w-full whitespace-nowrap numbered-heading font-['Cormorant_Upright'] font-[700] text-[24px]">
+                My Skills
+            </h1>
+            <p>
+                Here are a few technologies I've been working with recently:
+            </p>
+            <div class="grid grid-cols-2 gap-4 w-[50%]">
+                <div class="col-span-1">
+                    <ul>
+                        <li>JavaScript (ES6+)</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="col-span-1">
+                    <ul>
+                        <li>Tailwind</li>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <div id="testimonials"></div>
+        <!-- <section class="bg-white m-12 p-8 rounded-lg shadow">
+            <h1 class="flex items-center justify-center relative w-full whitespace-nowrap numbered-heading font-['Cormorant_Upright'] font-[700] text-[24px]">
+                Testimonials
+            </h1>
+
+            <p class="text-center">
+                People I've worked with have said some nice things...
+            </p>
+
+            <div class="container mx-auto mt-20 swiper mySwiper">
+                <div class="mb-16 swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="mb-2 mx-28 p-4 text-gray-800 rounded-lg shadow-md">
+                            <div class="mb-2">
+                                <p class="mb-2 text-center text-gray-600 ">
+                                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                                </p>
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                                        <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                                    </div>
+                                    <h5 class="font-bold text-indigo-600">John Doe</h5>
+                                    <p class="text-sm text-gray-600">CEO / Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="mb-2 mx-28 p-4 text-gray-800 rounded-lg shadow-md">
+                            <div class="mb-2">
+                                <p class="mb-2 text-center text-gray-600 ">
+                                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                                </p>
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                                        <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                                    </div>
+                                    <h5 class="font-bold text-indigo-600">John Doe</h5>
+                                    <p class="text-sm text-gray-600">CEO / Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="mb-2 mx-28 p-4 text-gray-800 rounded-lg shadow-md">
+                            <div class="mb-2">
+                                <p class="mb-2 text-center text-gray-600 ">
+                                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                                </p>
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                                        <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                                    </div>
+                                    <h5 class="font-bold text-indigo-600">John Doe</h5>
+                                    <p class="text-sm text-gray-600">CEO / Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section> -->
+
+        <!-- PROJECTS SECTION -->
+        <div id="projects"></div>
+        <section class="bg-white my-10 md:m-12 p-8 rounded-lg shadow">
+            <h1 class="flex items-center relative w-full whitespace-nowrap numbered-heading font-['Cormorant_Upright'] font-[700] text-[24px]">
+                Projects
+            </h1>
+            <p>
+                Here are a few things I've built recently:
+            </p>
+
+            <div class="grid grid-cols-12 gap-8 text-white">
+                <div class="port-box cursor-pointer relative rounded-2xl overflow-hidden bg-[#292e33] flex col-span-12 md:col-span-6 items-center border-2 border-gray-500 shadow-lg">
+                    <div class="img-div flex items-center justify-center h-full w-full">
+                        <img src="./images/Quiz.png" alt="Quiz App" class="w-full h-full opacity-90 transition-[.5s]">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-full opacity-0 hover:opacity-80 bg-gradient-to-r from-indigo-950 to-indigo-900 flex items-center justify-center flex-col gap-2 text-center transition-[.5s] px-4">
+                        <h3 class="font-bold text-[20px]">
+                            BizzQuiz <hr class="opacity-40">
+                        </h3>
+                        <p>
+                            A quiz application that allows users to test their knowledge 
+                            by answering trivia questions from various categories and 
+                            difficulty levels.
+                        </p>
+                        <div class="text-white mt-4 self-end">
+                            <a href="https://github.com/BlessingOkonkwo/biz-quiz" title="github" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-brands fa-github fa-lg hover:cursor-pointer"></i>
+                            </a>
+                            <a href="https://biz-quiz.vercel.app/" title="live url" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square hover:cursor-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="port-box cursor-pointer relative rounded-2xl overflow-hidden bg-[#292e33] flex col-span-12 md:col-span-6 items-center border-2 border-gray-500 shadow-lg">
+                    <div class="img-div flex items-center justify-center h-full w-full">
+                        <img src="./images/lyrify.png" alt="Quiz App" class="w-full h-full opacity-90 transition-[.5s]">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-full opacity-0 hover:opacity-80 bg-gradient-to-r from-indigo-950 to-indigo-900 flex items-center justify-center flex-col gap-2 text-center transition-[.5s] px-4">
+                        <h3 class="font-bold text-[20px]">
+                            Lyrify <hr class="opacity-40">
+                        </h3>
+                        <p>
+                            An upgraded Spotify with a sleek homepage, complete music 
+                            player, powerful search, and engaging song exploration. 
+                            Discover lyrics, top charts, artists, and more.
+                        </p>
+                        <div class="text-white mt-4 self-end">
+                            <a href="https://github.com/BlessingOkonkwo/lyrify" title="github" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-brands fa-github fa-lg hover:cursor-pointer"></i>
+                            </a>
+                            <a href="https://lyrify-five.vercel.app/" title="live url" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square hover:cursor-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="port-box cursor-pointer relative rounded-2xl overflow-hidden bg-[#292e33] flex col-span-12 md:col-span-6 items-center border-2 border-gray-500 shadow-lg">
+                    <div class="img-div flex items-center justify-center h-full w-full">
+                        <img src="./images/fullstack_blog.png" alt="Quiz App" class="w-full h-full opacity-90 transition-[.5s]">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-full opacity-0 hover:opacity-80 bg-gradient-to-r from-indigo-950 to-indigo-900 flex items-center justify-center flex-col gap-2 text-center transition-[.5s] px-4">
+                        <h3 class="font-bold text-[20px]">
+                            Blog App <hr class="opacity-40">
+                        </h3>
+                        <p>
+                            A powerful Fullstack Blog App using React, MongoDB, Node.js, 
+                            and Express.js for seamless user registration, login, writing, 
+                            editing, and deleting of blog posts.
+                        </p>
+                        <div class="text-white mt-4 self-end">
+                            <a href="https://github.com/BlessingOkonkwo/fullstack-blog" title="github" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-brands fa-github fa-lg hover:cursor-pointer"></i>
+                            </a>
+                            <a href="https://fullstack-blog-blue.vercel.app/" title="live url" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square hover:cursor-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="port-box cursor-pointer relative rounded-2xl overflow-hidden bg-[#292e33] flex col-span-12 md:col-span-6 items-center border-2 border-gray-500 shadow-lg">
+                    <div class="img-div flex items-center justify-center h-full w-full">
+                        <img src="./images/piggyvest.png" alt="Quiz App" class="w-full h-full opacity-90 transition-[.5s]">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-full opacity-0 hover:opacity-80 bg-gradient-to-r from-indigo-950 to-indigo-900 flex items-center justify-center flex-col gap-2 text-center transition-[.5s] px-4">
+                        <h3 class="font-bold text-[20px]">
+                            PiggyClone <hr class="opacity-40">
+                        </h3>
+                        <p>
+                            An impressive clone of Piggyvest's landing page, replicating 
+                            its seamless navigation and full functionality. 
+                        </p>
+                        <div class="text-white mt-4 self-end">
+                            <a href="https://github.com/BlessingOkonkwo/piggyvest-lp" title="github" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-brands fa-github fa-lg hover:cursor-pointer"></i>
+                            </a>
+                            <a href="https://bee-piggyvest-clone.netlify.app/" title="live url" class="rounded hover:text-[#64ffda] hover:animate-pulse mx-2 shadow-md p-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square hover:cursor-pointer"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-6">
+                <span class="border border-gray-300 cursor-pointer hover:text-[#6747c7] active:bg-inherit p-2 rounded-lg shadow-md bg-[#e6e6fa] hover:bg-[#cbcbfa] active:bg-[#e6e6fa] font-bold">
+                    <a href="https://github.com/BlessingOkonkwo?tab=repositories">View my projects archive -></a>
+                </span>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <div id="contact"></div>
+        <section class="bg-white dark:bg-gray-900 my-10">
+            <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                    Get In Touch!
+                </h2>
+                <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+                    I’m currently looking for new opportunities, my inbox is always open if 
+                    you're interested in working with me. Whether you want to work with me, 
+                    have a question or just want to say hi, I’ll get back to you!
+                </p>
+                <form action="#" class="space-y-8">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                        <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                        <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let me know how I can help you" required>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                        <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                    </div>
+                    <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#6747c7] sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+                </form>
+            </div>
+          </section>
+
+        
+    </div>
+
+    <script src="./main.js"></script>
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  
+    <!-- Initialize Swiper -->
+    <!-- <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        grid: {
+          rows: 1,
+        },
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script> -->
+
+</body>
+</html>
